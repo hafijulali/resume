@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Sheikh Hafijul Ali
 
 [Karnataka,India](https://www.google.com/maps/place/Bengaluru,%20Karnataka,%20India) | [mail@hafijul.dev](mail@haﬁjul.dev) | [https://haﬁjul.dev](https://haﬁjul.dev/) | [+917992390073](tel:+917992390073)
