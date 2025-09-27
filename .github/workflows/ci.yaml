@@ -3,7 +3,10 @@ name: Build and Deploy Resume to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - master # Trigger the workflow when changes are pushed to the 'master' branch
+  pull_request:
+    branches:
+      - master # Trigger the workflow on pull request to 'master'
   workflow_dispatch: # Allow the workflow to be triggered manually from the Actions tab
 
 jobs:
@@ -32,10 +35,13 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      # Step 5: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
+      # Step 5: Deploy to gh-pages branch
+      - name: Deploy to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
-          folder: .
-          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages # Deploy to the 'gh-pages' branch
+          folder: . # The folder to deploy (root directory)
+          token: ${{ secrets.GITHUB_TOKEN }} # Automatically provided token for authentication
+          allow_empty_commit: true # Allows deployments even if there are no changes
+          keep_files: true # Keeps current files on the gh-pages branch (optional)
+

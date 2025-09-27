@@ -28,7 +28,8 @@ layout: default
 |-----------------------|------------------------|
 | Golang                | Leadership Quality     |
 | Linux                 | Detail Oriented        |
-| Docker and Kubernetes | Problem Solver         |
+| Docker                | Problem Solver         |
+| Kubernetes            | Effective Communicator |
 | Python                | Dependable Team Player |
 | API Design            | Fast Learner           |
 | PostgreSQL            |                        |
@@ -43,7 +44,7 @@ layout: default
 #### Cisco Systems Inc | Software Engineer – II | June 2025 – Present
 
 - Part of Cisco Compute Engineering team as a software engineer working on platform and cloud technologies.
-- Automated tedious tasks for team to improve engineering log analysis time.
+- Automated tedious tasks for team to improve engineering log analysis time by 60%.
 
 #### Cisco Systems Inc | Technical Consulting Engineer – II | April 2025 – June 2025
 
@@ -73,16 +74,15 @@ operational efficiency by 50%.
 
 #### [GoDevOps](https://gitlab.com/hafijulali/godevops) | January 2025 – Present
 
-- A Golang containerized application to manage container deployments via HTTP RESTful APIs.
+- Golang containerized application to manage container deployments via HTTP RESTful APIs.
 - Written to be scalable with task workers and goroutines for async request execution.
 - Use of golang’s mutex for preventing race conditions and data integrity.
 
-#### Serviceability API | April 2024 - April 2025
+#### GoParseIt | May 2025 – Present
 
-- A Python FastAPI backend designed to gather bug data from various internal services at Cisco.
-- Internally calls multiple resources to expose data via a single API endpoint.
-- Written from scratch with performance and extensibility in mind.
-- Used Docker Compose to declare and build containerized application for easy deployments.
+- Golang backend log parser designed for concurrent async log parsing and analysis.
+- Reduced 60% of manual work in analyzing Cisco datacenter product log bundles with multi-level nesting.
+- Consumed in-house APIs for user authentication and security compliance within the frontend (Fusion Dashboard) app.
 
 #### Migration Assistant | January 2024 -- April 2025
 
@@ -121,6 +121,7 @@ operational efficiency by 50%.
 
 ----
 
+- Cisco Certiﬁed DevNet Professional - Datacenter | Cisco
 - Cisco Certiﬁed DevNet Associate | Cisco
 - Cisco Certiﬁed Network Associate | Cisco
 - Introduction to Relational Database and SQL | Coursera
