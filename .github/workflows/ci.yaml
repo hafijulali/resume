@@ -1,0 +1,41 @@
+name: Build and Deploy Resume to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: # Allow the workflow to be triggered manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Use an Ubuntu runner
+
+    steps:
+      # Step 1: Checkout code to get the repository files
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Pandoc
+      - name: Set up Pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      # Step 3: Create the HTML file from resume.md using pandoc and apply custom CSS
+      - name: Build HTML from Markdown (resume.md)
+        run: |
+          pandoc -s -o index.html resume.md --css=style.css
+
+      # Step 4: Configure Git for deployment
+      - name: Set up Git for deployment
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .
+          token: ${{ secrets.GITHUB_TOKEN }}
