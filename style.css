@@ -9,7 +9,7 @@
 
 @page {
   size: A4;
-  margin: 15mm 14mm 16mm;
+  margin: 12mm 12mm 13mm;
 }
 
 * {
@@ -54,18 +54,29 @@ h2 {
   display: none;
 }
 
+.resume-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.resume-header h1 {
+  margin-bottom: 6px;
+}
+
+.resume-header p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
 h1 {
   margin-bottom: 6px;
   color: #0c1726;
   font-size: 39px;
   line-height: 1.05;
   letter-spacing: -0.04em;
-}
-
-h1 + p {
-  margin-bottom: 20px;
-  color: var(--muted);
-  font-size: 16px;
 }
 
 h3 {
@@ -112,6 +123,28 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.download-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  padding: 9px 14px;
+  border: 1px solid rgba(15, 76, 129, 0.3);
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1;
+  box-shadow: 0 8px 18px rgba(15, 76, 129, 0.18);
+}
+
+.download-button:hover {
+  background: #0b3d68;
+  text-decoration: none;
 }
 
 hr {
@@ -170,28 +203,57 @@ tbody tr:nth-child(even) td {
     margin: 0;
     padding: 0;
     box-shadow: none;
-    font-size: 12.5pt;
-    line-height: 1.34;
+    font-size: 11pt;
+    line-height: 1.18;
   }
 
   h1 {
-    font-size: 29pt;
+    font-size: 24pt;
   }
 
   h3 {
-    margin-top: 13pt;
-    font-size: 15pt;
+    margin: 7pt 0 4pt;
+    padding-bottom: 3pt;
+    font-size: 12.5pt;
+    letter-spacing: 0.06em;
   }
 
   h4 {
-    margin-top: 9pt;
-    font-size: 13pt;
+    margin: 6pt 0 2pt;
+    font-size: 11.5pt;
     break-after: avoid;
   }
 
-  ul,
+  hr {
+    margin: 5pt 0 6pt;
+  }
+
+  ul {
+    margin-bottom: 4pt;
+    padding-left: 14pt;
+  }
+
+  li {
+    margin-bottom: 1.5pt;
+  }
+
   table {
+    margin: 4pt 0 6pt;
+    font-size: 10pt;
+    break-inside: auto;
+  }
+
+  th,
+  td {
+    padding: 2pt 4pt;
+  }
+
+  tr {
     break-inside: avoid;
+  }
+
+  .download-button {
+    display: none;
   }
 
   a {
