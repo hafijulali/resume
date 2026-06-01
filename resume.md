@@ -2,9 +2,13 @@
 layout: default
 ---
 
-# Sheikh Hafijul Ali
-
-[Karnataka,India](https://www.google.com/maps/place/Bengaluru,%20Karnataka,%20India) | [mail@hafijul.dev](mail@haﬁjul.dev) | [https://haﬁjul.dev](https://haﬁjul.dev/) | [+917992390073](tel:+917992390073)
+<header class="resume-header">
+<div>
+<h1>Sheikh Hafijul Ali</h1>
+<p><a href="https://www.google.com/maps/place/Bengaluru,%20Karnataka,%20India">Karnataka,India</a> | <a href="mail@hafijul.dev">mail@hafijul.dev</a> | <a href="https://hafijul.dev/">https://hafijul.dev</a> | <a href="tel:+917992390073">+917992390073</a></p>
+</div>
+<a class="download-button" href="Sheikh Hafijul Ali's Resume.pdf" download>Download Resume PDF</a>
+</header>
 
 ----
 

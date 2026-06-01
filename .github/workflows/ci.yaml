@@ -18,16 +18,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up Pandoc
-      - name: Set up Pandoc
+      # Step 2: Set up Pandoc and PDF renderer
+      - name: Set up Pandoc and WeasyPrint
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc
+          sudo apt-get install -y pandoc weasyprint
 
-      # Step 3: Create the HTML file from resume.md using pandoc and apply custom CSS
-      - name: Build HTML from Markdown (resume.md)
+      # Step 3: Create the HTML and PDF files from resume.md
+      - name: Build resume artifacts
         run: |
-          pandoc -s -o index.html resume.md --css=style.css
+          pandoc -s -o index.html resume.md --css=style.css --metadata title=resume
+          pandoc -s -o resume.html resume.md --css=style.css --metadata title="Sheikh Hafijul Ali Resume"
+          weasyprint resume.html "Sheikh Hafijul Ali's Resume.pdf"
 
       # Step 4: Configure Git for deployment
       - name: Set up Git for deployment
@@ -44,4 +46,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }} # Automatically provided token for authentication
           allow_empty_commit: true # Allows deployments even if there are no changes
           keep_files: true # Keeps current files on the gh-pages branch (optional)
-
