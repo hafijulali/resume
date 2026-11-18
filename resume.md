@@ -49,7 +49,7 @@ layout: default
 
 ----
 
-#### Cisco Systems Inc | Software Engineer – II | June 2025 – Present
+#### Cisco Systems Inc | Software Engineer – II | June 2025 – November 2026
 
 - Own platform and cloud automation initiatives within Cisco Compute Engineering for server, Fabric Interconnect, and Intersight analysis workflows.
 - Architected and delivered GoParseIt, a production log-analysis platform with a Golang backend, concurrent archive extraction, async scanning pipeline, session-based processing, and a Fusion web experience.
